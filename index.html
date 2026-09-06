@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diana-pro-uslugi</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jura:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="app">
+    
+    <!-- ---SVG FILTER GLASS EFFECT -->
+    <svg style="position:absolute; width:0; height:0;">
+        <filter id="glass-refraction">
+        <feTurbulence type="fractalNoise" baseFrequency="0.008" numOctaves="2" result="noise"/>
+        <feDisplacementMap in="SourceGraphic" in2="noise" scale="20" xChannelSelector="R" yChannelSelector="G"/>
+        </filter>
+    </svg>
+
+
+    <!-- ---HEADER--- -->
+    <header class="header">
+        <div class="logo_container">
+            <div class="logo_wrapper">
+                <img src="img/logo.jpg" alt="Logo" class="logo">
+            </div>
+            
+            <div class="logo_text">
+                <h2 class="logo_title">БУХГАЛТЕРИЯ ДК</h2>
+                <p class="logo_subtitle">Бухгалтерские услуги</p>
+            </div>
+        </div>
+
+        <div class="arrow_container">
+            <img src="img/arrow_bot.svg" alt="Arrow bottom" class="arrow_bot">
+            <img src="img/arrow_bot.svg" alt="Arrow bottom" class="arrow_bot">
+        </div>
+
+        <div class="phone_container">
+            <img src="img/phone.svg" alt="Phone" class="phone">
+            <div class="phone_text">
+                <h2 class="phone_title">Звоните мне</h2>
+                <a href="tel:+79025118043" class="phone_link">+7 (902) 511 · 80 · 43</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- ---HERO--- -->
+        <section class="hero">
+            <p class="hero_subtitle">Надежное бухгалтерское</p>
+
+            <h1 class="hero_title--main">Сопровождение</h1>
+
+            <div class="note">
+                <p class="note_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet.</p>
+                <button class="btn_application" id="application">Оставить заявку</button>
+            </div>
+
+            <div class="hero_information">
+                <img src="img/laptop.png" alt="Laptop" class="laptop">
+                <div class="hero_information--text">
+                    <h2 class="hero_information--title">Профессиональные бухгалтерские услуги</h2>
+                    <p class="hero_information--subtitle">Бухгалтерские услуги для бизнеса, Нам доверяют многие!</p>
+                    <div class="working_hours">
+                        <h2 class="working_hours--title">Режим работы</h2>
+                        <div class="working_hours--line">
+                            <p class="working_date">пн-пт</p>
+                            <time class="datetime" datetime="10:00">10:00</time>-<time class="datetime" datetime="17:00">17:00</time>
+                        </div>
+                        <div class="working_hours--line">
+                            <p class="working_date">пн-пт</p>
+                            <p class="relax">выходные</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ---PHOTO AND SOCIAL--- -->
+        <section class="social">
+            <div class="social_photo">
+                <div class="social_container">
+                    <h2 class="social_title">Социальные сети для связи</h2>
+                    <ul class="social_group">
+                        <li class="social_link">
+                            <a href="https://2gis.ru/irkutsk/geo/70000001074420250" target="_blank"><img src="img/2gis.svg" alt="2gis" class="social_icon"></a>
+                        </li>
+
+                        <li class="social_link">
+                            <a href="mailto:Diana_pro_nalogi@mail.ru" target="_blank" title="Diana_pro_nalogi@mail.ru"><img src="img/Email.svg" alt="Email" class="social_icon"></a>
+                        </li>
+
+                        <li class="social_link">
+                            <a href="https://max.ru/u/f9LHodD0cOJjFA3tEyHAX8DzB9jKTRbK7TzUcj8cJP7CWMBUJUh11SMqxng" target="_blank"><img src="img/Max.svg" alt="Max" class="social_icon"></a>
+                        </li>
+
+                        <li class="social_link">
+                            <a href="https://vk.ru/nalogi.buhgalter38" target="_blank"><img src="img/Vk.png" alt="Vk" class="social_icon"></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+    <!-- ---MAIN--- -->
+    <main class="main">
+        <section class="services">
+            <div class="container">
+                <!-- <h2 class="services_title">Предлагаем вам:</h2> -->
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>
