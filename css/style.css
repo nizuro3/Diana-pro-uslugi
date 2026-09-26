@@ -136,7 +136,6 @@ body {
     gap: 23px;
     padding: 32px 42px 35px 42px;
     border-radius: 24px;
-    /* align-self: start; */
 }
 
 .hero_subtitle {
@@ -159,7 +158,7 @@ body {
 .note_text {
     font-size: 14px;
     color: var(--grey-additional);
-    max-width: 465px;
+    max-width: 550px;
 }
 
 .btn_application {
@@ -177,10 +176,6 @@ body {
 }
 
 .hero_information {
-    /* display: grid;
-    grid-template-columns: 1fr 1fr;
-    justify-content: space-between; */
-
     display: flex;
     justify-content: space-between;
 }
@@ -197,7 +192,6 @@ body {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    /* max-width: 340px; */
 }
 
 .hero_information--title {
@@ -254,7 +248,6 @@ body {
     font-size: 14px;
     color: #81FF85;
     background-color: var(--dark-green);
-    /* padding: 0 75px 5px 75px; */
     padding-bottom: 5px;
     border-radius: 5px;
     text-align: center;
@@ -263,7 +256,6 @@ body {
 
 /* ---PHOTO AND SOCIAL--- */
 .social {  
-    /* max-width: 800px; */
     padding-top: 18px;
 }
 
@@ -316,7 +308,7 @@ body {
 
 .social_group {
     display: flex;
-    gap: 16px;
+    gap: 15px;
     align-items: center;
 }
 
@@ -328,8 +320,21 @@ body {
 }
 
 .social_link a:hover {
-    transition: 0.3 ease;
+    transition: 0.1s ease;
     transform: scale(1.05);
+}
+
+.social_link a.social_link--boost {
+    transition: 0.3s ease;
+    transform: scale(1.15);
+    filter: drop-shadow(0 0 8px var(--green-base));
+    animation: social-pulse 0.6s ease-in-out 6; 
+    transform: scale(1.15);
+}
+
+@keyframes social-pulse {
+    0%, 100% { transform: scale(1); }
+    50%      { transform: scale(1.25); }
 }
 
 
@@ -427,11 +432,8 @@ body {
     max-width: 350px;
     width: 100%;
 
-    /* display: flex;
-    align-items: center;
-    justify-content: center; */
     display: grid;
-    grid-template-columns: 1fr auto; /* первая колонка тянется, вторая по контенту */
+    grid-template-columns: 1fr auto;
     align-items: center;
 
     padding: 16px 20px 16px 0;
@@ -539,8 +541,6 @@ body {
 .reference_card--img {
     display: block;
     object-fit: cover;
-    width: 20px;
-    height: 10px;
 
     cursor: pointer;
 
@@ -612,4 +612,132 @@ body {
 .about_text {
     font-size: 18px;
     color: var(--grey-additional);
+}
+
+
+
+/* ---ACHIEVEMENTS--- */
+.achievements {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+
+    padding-top: 85px;
+    margin: 0 auto;
+}
+
+.achievements_title {
+    font-size: 40px;
+    font-weight: normal;
+    text-transform: uppercase;
+}
+
+.achievements_slider {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.achievements_slider--container {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.block_slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: var(--dark-white);
+    border-radius: 100%;
+    border: 1px solid var(--black-base);
+    box-sizing: border-box;
+
+    width: 65px;
+    height: 65px;
+}
+
+.block_slide--active {
+    border: 2px solid var(--black-base);
+    cursor: pointer;
+}
+
+.slide_left--img {
+    width: 30px;
+    transform: translateX(-2px) rotate(90deg);
+}   
+
+.slide_right--img {
+    width: 30px;
+    transform: translateX(2px) rotate(-90deg);
+}
+
+.achievements_certificate {
+    display: block;
+    object-fit: cover;
+    max-width: 1000px;
+    max-height: 700px;
+}
+
+.pagination_group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.pagination {
+    border: 3px solid var(--green-base);
+    border-radius: 100%;
+    width: 25px;
+    height: 25px;
+
+    cursor: pointer;
+}
+
+.pagination_active {
+    background-color: var(--green-base);
+    cursor: default;
+}
+
+
+/* ---FOOTER--- */
+.footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 50px;
+    padding: 140px 0 20px 0;
+}
+
+.footer_social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+
+.footer_title {
+    font-size: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.footer_social--group {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+}
+
+.footer_social--link img {
+    width: 55px;
+}
+
+.copyright {
+    font-size: 18px;
+    color: var(--grey-additional);
+
+    text-align: center;
 }

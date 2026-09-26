@@ -49,7 +49,7 @@
             <h1 class="hero_title--main">Сопровождение</h1>
 
             <div class="note">
-                <p class="note_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet.</p>
+                <p class="note_text">Беру на себя отчётность, налоги и общение с ФНС, чтобы вы занимались бизнесом, а не бумагами. Опыт больше 10 лет.</p>
                 <button class="btn_application" id="application">Оставить заявку</button>
             </div>
 
@@ -79,19 +79,19 @@
                     <h2 class="social_title">Социальные сети для связи</h2>
                     <ul class="social_group">
                         <li class="social_link">
-                            <a href="https://2gis.ru/irkutsk/geo/70000001074420250" target="_blank"><img src="img/2gis.svg" alt="2gis" class="social_icon"></a>
+                            <a href="https://2gis.ru/irkutsk/geo/70000001074420250" target="_blank" id="2gis"><img src="img/2gis.svg" alt="2gis" class="social_icon"></a>
                         </li>
 
                         <li class="social_link">
-                            <a href="mailto:Diana_pro_nalogi@mail.ru" target="_blank" title="Diana_pro_nalogi@mail.ru"><img src="img/Email.svg" alt="Email" class="social_icon"></a>
+                            <a href="mailto:Diana_pro_nalogi@mail.ru" target="_blank" title="Diana_pro_nalogi@mail.ru" id="Email"><img src="img/Email.svg" alt="Email" class="social_icon"></a>
                         </li>
 
                         <li class="social_link">
-                            <a href="https://max.ru/u/f9LHodD0cOJjFA3tEyHAX8DzB9jKTRbK7TzUcj8cJP7CWMBUJUh11SMqxng" target="_blank"><img src="img/Max.svg" alt="Max" class="social_icon"></a>
+                            <a href="https://max.ru/u/f9LHodD0cOJjFA3tEyHAX8DzB9jKTRbK7TzUcj8cJP7CWMBUJUh11SMqxng" target="_blank" id="Max"><img src="img/Max.svg" alt="Max" class="social_icon"></a>
                         </li>
 
                         <li class="social_link">
-                            <a href="https://vk.ru/nalogi.buhgalter38" target="_blank"><img src="img/Vk.png" alt="Vk" class="social_icon"></a>
+                            <a href="https://vk.ru/nalogi.buhgalter38" target="_blank" id="Vk"><img src="img/Vk.png" alt="Vk" class="social_icon"></a>
                         </li>
                     </ul>
                 </div>
@@ -269,7 +269,62 @@
                 </div>
             </div>
         </section>
+
+        <!-- ---ACHIEVEMENTS--- -->
+        <section class="achievements">
+            <h2 class="achievements_title">Мне есть, чем гордиться</h2>
+
+            <div class="achievements_slider">
+                <div class="achievements_slider--container">
+                    <div class="block_slide">
+                        <img src="img/arrow_combobox.svg" alt="Arrow left" class="slide_left--img">
+                    </div>
+
+                    <img src="img/certificate_1.jpg" alt="Диплом специалиста" class="achievements_certificate">
+                    
+                    <div class="block_slide block_slide--active">
+                        <img src="img/arrow_combobox.svg" alt="Arrow right" class="slide_right--img slide_img--active">
+                    </div>
+                </div>
+                
+                <div class="pagination_group">
+                    <div class="pagination pagination_active"></div>
+                    <div class="pagination"></div>
+                    <div class="pagination"></div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <div class="footer_social">
+                <h2 class="footer_title">Связаться со мной</h2>
+
+                <ul class="footer_social--group">
+                    <li class="social_link footer_social--link">
+                        <a href="https://2gis.ru/irkutsk/geo/70000001074420250" target="_blank"><img src="img/2gis.svg" alt="2gis" class="social_icon"></a>
+                    </li>
+
+                    <li class="social_link footer_social--link">
+                        <a href="mailto:Diana_pro_nalogi@mail.ru" target="_blank" title="Diana_pro_nalogi@mail.ru"><img src="img/Email.svg" alt="Email" class="social_icon"></a>
+                    </li>
+
+                    <li class="social_link footer_social--link">
+                        <a href="https://max.ru/u/f9LHodD0cOJjFA3tEyHAX8DzB9jKTRbK7TzUcj8cJP7CWMBUJUh11SMqxng" target="_blank"><img src="img/Max.svg" alt="Max" class="social_icon"></a>
+                    </li>
+
+                    <li class="social_link footer_social--link">
+                        <a href="https://vk.ru/nalogi.buhgalter38" target="_blank"><img src="img/Vk.svg" alt="Vk" class="social_icon"></a>
+                    </li>
+                </ul>
+            </div>
+
+            <p class="copyright">&copy; 2026, ИП Кузина Диана Вячеславовна ИНН 381807635176, ОГРНИП 323385000032922</p>
+        </footer>
     </main>
+
+    <!-- ---JAVASCRIPT--- -->
+    <script src="js/button-application.js"></script>
+    <script src="js/achievements-slider.js"></script>
 </body>
 
 </html>
