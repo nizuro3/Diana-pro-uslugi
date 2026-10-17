@@ -17,6 +17,7 @@ body {
     font-size: 18px;
 }
 
+
 /* ---HERO LAYOUT--- */
 .app {
     display: grid;
@@ -380,8 +381,8 @@ body {
     display: flex;
     flex-direction: column;
     gap: 55px;   
+
     margin: 0 auto;
-    flex-wrap: wrap;
 }
 
 .cards_services {
@@ -512,7 +513,6 @@ body {
     top: 0;
     left: 20px;
 
-    /* padding: 5px 10px; */
     padding: 1%;
     background-color: var(--dark-green);
     border-radius: 5px;
@@ -523,39 +523,42 @@ body {
 
 /* ADDITIONAL INFORMATION */
 .reference_price {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr;
     gap: 20px;
+    width: 100%;
+    min-width: 0;
 }
 
 .reference_card {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-
     background-color: var(--dark-white);
     border-radius: 12px;
-    padding: 15px 15px 15px 30px;
+    padding: 20px;
+
+    width: 100%;
 }
 
 .reference_card--text {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    list-style: none;
+    cursor: pointer;
+}
+
+.reference_card--text::-webkit-details-marker {
+    display: none;
 }
 
 .reference_card--title {
+    margin: 0;
     font-size: 18px;
     font-weight: bold;
-    align-content: flex-start;
 }
 
 .reference_card--img {
     display: block;
-    object-fit: cover;
-
-    cursor: pointer;
-
+    flex-shrink: 0;
     transition: transform 0.3s ease;
 }
 
@@ -564,6 +567,7 @@ body {
 }
 
 .reference_price--text {
+    margin: 20px 0 0;
     font-size: 14px;
     font-weight: normal;
 }
@@ -594,13 +598,14 @@ body {
 }
 
 .about_me--img img {
-    display: block;
-    object-fit: cover;
-    border-radius: 32px;
+        flex: 1 1 0;
+        min-width: 0;
+        width: 100%;
+        aspect-ratio: 1 / 1;
+        object-fit: cover; 
 
-    width: 340px;
-    /* max-height: 450px; */
-}
+        border-radius: 32px;
+    }
 
 .about_me--text {
     display: flex;
@@ -691,7 +696,7 @@ body {
 
 .achievements_certificate {
     display: block;
-    object-fit: cover;
+    object-fit: cover; 
     max-width: 1000px;
     max-height: 700px;
 }
@@ -754,6 +759,8 @@ body {
     color: var(--grey-additional);
 
     text-align: center;
+
+    text-wrap: balance;
 }
 
 
@@ -791,24 +798,8 @@ body {
 
 }
 
-/* =====1440px===== */
-@media (max-width: 1440px) {
-    
-    /* ==CONTAINER== */
-    .container {
-        padding: 0 32px;
-
-    }
-
-    .app {
-        gap: 20px;
-    }
-
-    /* ==HERO== */
-    .hero {
-        padding: 25px 20px;
-    }   
-
+/* =====1520px===== */
+@media (max-width: 1520px) {
     /* ==SERVICES */
     .cards_services {
         gap: 30px;
@@ -823,6 +814,24 @@ body {
     .more_price {
         width: 265px;
     }
+}
+
+/* =====1440px===== */
+@media (max-width: 1440px) {
+    
+    /* ==CONTAINER== */
+    .container {
+        padding: 0 32px;
+    }
+
+    .app {
+        gap: 20px;
+    }
+
+    /* ==HERO== */
+    .hero {
+        padding: 25px 20px;
+    }   
 
     /* ==ABOUT ME== */
     .about_me--container {
@@ -837,20 +846,526 @@ body {
     .about_text--container {
         gap: 15px;
     }
-}
 
-/* =====1430px===== */
-@media (max-width: 1430px) {
-    
-    /* ==ABOUT ME== */
-    
+    /* ==ACHIEVEMENTS== */
+    .achievements_certificate {
+        max-width: 800px;
+        max-height: 500px;
+    }
+
+    .pagination {
+        width: 20px;
+        height: 20px;
+    }
+
+    .block_slide {
+        width: 55px;
+        height: 55px;
+    }
+
+    .slide_left--img {
+        width: 25px;
+    }
+
+    .slide_right--img {
+        width: 25px;
+    }
 }
 
 /* =====1352px===== */
 @media (max-width: 1352px) {
     
     /* ==HEADER== */
+    .arrow_bot--invisibility {
+        display: none;
+    }
+
+    /* ==PHOTO AND SOCIAL== */
+    .social_title {
+        font-size: 18px;
+    }
+}
+
+
+/* =====1260px===== */
+@media (max-width: 1260px) {
+
+    /* ==HERO== */
+    .hero_subtitle {
+        font-size: 24px;
+    }
+    
+    .hero_title--main {
+        font-size: 50px;
+    }
+
+    /* ==SERVICES== */
+    .services_title {
+        font-size: 50px;
+    }
+
+    /* ==ABOUT ME== */
+    .about_title {
+        font-size: 50px;
+    }
+}
+
+/* =====1240px===== */
+@media (max-width: 1240px) {
+    
+    /* ==HEADER== */
+
+    .logo_title {
+        font-size: 14px;
+    }
+
+    .logo_subtitle {
+        font-size: 10px;
+    }
+
+    .arrow_bot--invisibility {
+        display: block;
+    }
+
+    .phone_title {
+        font-size: 10px;
+    }
+
+    .phone_link {
+        font-size: 14px;
+    }
+
+    /* ==HERO== */
+    .hero_subtitle {
+        font-size: 18px;
+    }
+
+    .hero_title--main {
+        font-size: 32px;
+    }
+
+    .note {
+        align-items: center;
+    }
+
+    .note_text {
+        font-size: 14px;
+    }
+
+    .btn_application {
+        font-size: 14px;
+        padding: 12px 30px;
+    }
+
+    .hero_information--title {
+        font-size: 14px;
+    }
+
+    .hero_information--subtitle {
+        font-size: 10px;
+    }
+
+    .working_hours--title {
+        font-size: 14px;
+    }
+
+    .working_date {
+        font-size: 10px;
+    }
+
+    .datetime {
+        font-size: 30px;
+    }
+
+    .relax {
+        font-size: 10px;
+    }
+
+    /* ==PHOTO AND SOCIAL== */
+    .social_title {
+        font-size: 14px;
+    }
+
+    .social_container {
+    padding: 10px 15px;
+    }
+
+    .social_photo--icon {
+    max-width: 25px;
+    }   
+
+    /* ==SERVICES== */
+    .services {
+        padding-top: 30px;
+    }
+
+    .services_container {
+        gap: 40px;
+    }
+
+    .services_section {
+        gap: 40px;
+    }
+
+    .services_title {
+        font-size: 25px;
+    }
+
+    .services_subtitle {
+        font-size: 10px;
+    }
+
+    .card_title {
+        font-size: 14px;
+    }
+
+    .card_subtitle {
+        font-size: 10px;
+    }
+
+    .card_price--title {
+        font-size: 30px;
+    }
+
+    .card_subtitle {
+        font-size: 10px;
+    }
+
+    .combobox_title {
+        font-size: 14px;
+    }
+
+    .popular {
+        font-size: 10px;
+    }
+
+    .additional_price--text {
+        font-size: 10px;
+    }
+
+    .reference_card--title {
+        font-size: 14px;
+    }
+
+    .reference_price--text {
+        font-size: 10px;
+    }
+
+    /* ==ABOUT ME== */
+    .about_me {
+        padding-top: 30px;
+    }
+
+    .about_me--container {
+        gap: 20px;
+    }
+
+   .about_me--img {
+        display: flex;
+        gap: 15px;
+        width: 100%;
+    }
+
+    .about_me--img img {
+        flex: 1 1 0;
+        min-width: 0;
+        width: 100%;
+        aspect-ratio: 4 / 5;
+        object-fit: cover; 
+    }
+
+    .about_title {
+        font-size: 25px;
+    }
+
+    .about_text {
+        font-size: 14px;
+    }
+
+    /* ==ACHIEVEMENTS== */
+    .achievements_title {
+        font-size: 25px;
+    }
+
+    /* ==FOOTER== */
+    .footer_title {
+        font-size: 25px;
+    }
+
+    .footer_social--group {
+        gap: 30px;
+    }
+
+    .social_icon {
+        max-width: 45px;
+    }
+
+    .copyright {
+        font-size: 14px;
+    }
+}
+
+/* =====1200px===== */
+@media (max-width: 1200px) {
+    
+    /* ==HERO== */
+    .note {
+        display: grid;
+        grid-template: 1fr 1fr / 1fr;
+    }
+
+    /* ==PHOTO AND SOCIAL== */
+    .social_container {
+        padding: 15px;
+    }
+
+    .social_group {
+        gap: 10px;
+    }
+
+    .social_title {
+        font-size: 14px;
+    }
+}
+
+/* =====1150px===== */
+@media (max-width: 1150px) {
+
+    /* ==HEADER== */
+    .arrow_bot--invisibility {
+        display: none;
+    }
+
+    /* ==SERVICES== */
+    .cards_services {
+        display: grid;
+        grid-template-rows: repeat(3, 1fr);
+        gap: 15px;
+    }
+
+    .services_section {
+        margin: 0;
+    }
+
+    .cards_services {
+        align-self: center;
+    }
+
+    /* ==ABOUT ME== */
+    .about_me--container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .about_me--img {
+        display: flex;
+        gap: 15px;
+        width: 100%;
+    }
+
+    .about_me--img img {
+        max-height: 250px;
+    }
+
+    .about_title {
+        text-align: center;
+    }
+}
+
+/* =====1100px===== */
+@media (max-width: 1100px) {
+
+    /* ==ACHIEVEMENTS== */
+    .achievements_certificate {
+        max-width: 600px;
+        max-height: 400px;
+    }
+
+    .block_slide {
+        width: 45px;
+        height: 45px;
+    }
+
+    .slide_left--img {
+        width: 20px;
+    }
+
+    .slide_right--img {
+        width: 20px;
+    }
+}
+
+/* =====1050px===== */
+@media (max-width: 1050px) {
+
+    /* ==HEADER== */
     .arrow_container {
+        display: none;
+    }
+}
+
+
+/* =====815px===== */
+@media (max-width: 815px) {
+    
+    .app {
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* ==HEADER== */
+    .arrow_container {
+        display: flex;
+    }
+
+    .arrow_bot--invisibility {
+        display: block;
+    }
+
+    /* ==PHOTO AND SOCIAL== */
+    .social_photo {
+        aspect-ratio: 16 / 9;
+        flex-shrink: 0;
+    }
+
+
+    /* ==ACHIEVEMENTS== */
+    .achievements_certificate {
+        max-width: 400px;
+        max-height: 280px;
+    }
+
+    .pagination {
+        width: 15px;
+        height: 15px;
+
+        border: 2px solid var(--green-base);
+    }
+}
+
+/* =====650px===== */
+@media (max-width: 650px) {
+
+    /* ==ACHIEVEMENTS== */
+    .block_slide {
+        width: 35px;
+        height: 35px;
+    }
+
+    .slide_left--img {
+        width: 15px;
+    }
+
+    .slide_right--img {
+        width: 15px;
+    }
+
+    .achievements_certificate {
+        max-width: 300px;
+        max-height: 300px;
+    }
+}
+
+
+
+/* =====580px===== */
+@media (max-width: 580px) {
+    
+    /* ==HEADER== */
+    .arrow_bot--invisibility {
+        display: none;
+    }
+
+    /* ==ACHIEVEMENTS== */
+    .achievements_certificate {
+        max-width: 300px;
+        max-height: 200px;
+    }
+
+    /* ==FOOTER== */
+    .footer {
+        gap: 30px;
+    }
+
+    .footer_social {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .footer_social--group {
+        gap: 20px;
+    }
+}
+
+/* =====500px===== */
+@media (max-width: 500px) {
+    
+    /* ==HEADER== */
+    .arrow_container {
+        display: none;
+    }
+}
+
+/* =====450px===== */
+@media (max-width: 450px) {
+
+    /* ==HEADER== */
+    .header {
+        align-items: center;
+    }
+
+    .logo_container {
+        flex-direction: column;
+
+        gap: 10px;
+    }
+
+    .logo {
+        width: 42px;
+        height: 42px;
+    }
+
+    .arrow_container {
+        display: block;
+    }
+
+    .phone_container {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .phone_text {
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    /* ==ACHIEVEMENTS== */
+    .achievements_certificate {
+        max-width: 200px;
+        max-height: 150px;
+    }
+}
+
+/* =====400px===== */
+@media (max-width: 400px) {
+
+    /* ==SERVICES== */
+    .card_service {
+        padding: 20px 10px 15px 10px;
+    }
+}
+
+
+/* =====380px===== */
+@media (max-width: 380px) {
+
+    /* ==HERO== */
+    .hero_information {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .laptop {
         display: none;
     }
 }

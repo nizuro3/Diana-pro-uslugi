@@ -6,7 +6,7 @@
     { src: 'img/certificate_3.jpg', alt: 'Диплом специалиста 3' },
   ];
 
-  const AUTOPLAY_MS = 5000; // 0 — выключить автопрокрутку
+  const AUTOPLAY_MS = 0; // 0 — выключить автопрокрутку
 
   const certificate = document.querySelector('.achievements_certificate');
   const leftArrow   = document.querySelector('.slide_left--img');

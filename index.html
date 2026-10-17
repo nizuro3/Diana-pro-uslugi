@@ -21,7 +21,7 @@
         <header class="header">
             <div class="logo_container">
                 <div class="logo_wrapper">
-                    <img src="img/logo.jpg" alt="Logo" class="logo">
+                    <img src="img/logo_high--quality.jpg" alt="Logo" class="logo">
                 </div>
                 
                 <div class="logo_text">
@@ -31,7 +31,7 @@
             </div>
 
             <div class="arrow_container">
-                <img src="img/arrow_bot.svg" alt="Arrow bottom" class="arrow_bot">
+                <img src="img/arrow_bot.svg" alt="Arrow bottom" class="arrow_bot arrow_bot--invisibility">
                 <img src="img/arrow_bot.svg" alt="Arrow bottom" class="arrow_bot">
             </div>
 
@@ -79,22 +79,22 @@
         <section class="social">
             <div class="social_photo">
                 <div class="social_container">
-                    <h2 class="social_title">Социальные сети для связи</h2>
-                    <ul class="social_group">
+                    <h2 class="social_title" id="social_title">Социальные сети для связи</h2>
+                    <ul class="social_group" id="social_group">
                         <li class="social_link">
-                            <a href="https://2gis.ru/irkutsk/geo/70000001074420250" target="_blank" id="2gis"><img src="img/2gis.svg" alt="2gis" class="social_icon"></a>
+                            <a href="https://2gis.ru/irkutsk/geo/70000001074420250" target="_blank" id="2gis"><img src="img/2gis.svg" alt="2gis" class="social_photo--icon"></a>
                         </li>
 
                         <li class="social_link">
-                            <a href="mailto:Diana_pro_nalogi@mail.ru" target="_blank" title="Diana_pro_nalogi@mail.ru" id="Email"><img src="img/Email.svg" alt="Email" class="social_icon"></a>
+                            <a href="mailto:Diana_pro_nalogi@mail.ru" target="_blank" title="Diana_pro_nalogi@mail.ru" id="Email"><img src="img/Email.svg" alt="Email" class="social_photo--icon"></a>
                         </li>
 
                         <li class="social_link">
-                            <a href="https://max.ru/u/f9LHodD0cOJjFA3tEyHAX8DzB9jKTRbK7TzUcj8cJP7CWMBUJUh11SMqxng" target="_blank" id="Max"><img src="img/Max.svg" alt="Max" class="social_icon"></a>
+                            <a href="https://max.ru/u/f9LHodD0cOJjFA3tEyHAX8DzB9jKTRbK7TzUcj8cJP7CWMBUJUh11SMqxng" target="_blank" id="Max"><img src="img/Max.svg" alt="Max" class="social_photo--icon"></a>
                         </li>
 
                         <li class="social_link">
-                            <a href="https://vk.ru/nalogi.buhgalter38" target="_blank" id="Vk"><img src="img/Vk.png" alt="Vk" class="social_icon"></a>
+                            <a href="https://vk.ru/nalogi.buhgalter38" target="_blank" id="Vk"><img src="img/Vk.png" alt="Vk" class="social_photo--icon"></a>
                         </li>
                     </ul>
                 </div>
@@ -327,6 +327,31 @@
     </main>
 
     <!-- ===JAVASCRIPT=== -->
+    <script>
+        document.getElementById('application').addEventListener('click', function () {
+            if (window.matchMedia('(max-width: 1150px)').matches) {
+            document.getElementById('social_group').scrollIntoView({ 
+                behavior: 'smooth',
+                block: 'center'
+                });
+            }
+        });
+    </script>
+
+    <script>
+        const logo = document.querySelector('.logo');
+        const mq = window.matchMedia('(max-width: 450px)');
+
+        function updateLogo() {
+            logo.src = mq.matches
+            ? 'img/logo_low--quality.jpg'
+            : 'img/logo_high--quality.jpg';
+        }
+
+        updateLogo();
+        mq.addEventListener('change', updateLogo);
+    </script>
+
     <script src="js/button-application.js"></script>
     <script src="js/achievements-slider.js"></script>
 </body>
