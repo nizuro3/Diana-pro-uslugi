@@ -477,19 +477,8 @@ body {
     justify-self: center;
 }
 
-.combobox_img {
-    display: block;
-    object-fit: cover;
-    
-    justify-self: end;
-
-    cursor: pointer;
-
-    transition: transform 0.3s ease;
-}
-
 /* ANIMATION ARROW */
-.more_price[open] .combobox_img {
+.reference_card[open] .reference_card--img {
     transform: rotate(180deg);
 }
 
@@ -577,9 +566,11 @@ body {
     display: block;
     flex-shrink: 0;
     transition: transform 0.3s ease;
+
+    cursor: pointer;
 }
 
-.reference_card[open] .reference_card--img {
+.more_price[open] .reference_card--img {
     transform: rotate(180deg);
 }
 
